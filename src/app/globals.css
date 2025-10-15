@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.events-container {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+.events-date {
+    width: 100px;
+    border: 2px solid #000;
+    margin: 5px;
+    text-align: center;
+}
+
+.event-weekdag {
+    padding: 2px;
+    font-weight: bolder;
+}
+
+.event-maand {
+    background-color: #006941;
+    text-shadow: 1px 1px 1px #000000;
+    color: #fff;
+    padding: 5px;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+    font-size: 30px;
+}
+
+.event-dag {
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.events-body {
+    margin: 5px;
+    border-top: 3px;
+    border-left: 0;
+    padding: 0 30px;
+}
+
+.events-header {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #006941;
+}
+
+.events-location {
+    color: gray;
+    margin-bottom: 5px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.small {
+    font-size: 12px;
+    line-height: 1.8em;
+}
+
+.bold {
+    font-weight: bold;
 }
