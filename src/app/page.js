@@ -2,9 +2,6 @@ import moment from 'moment';
 
 export default async function Home() {
 
-  const cal_id = '98a30a37d1a3e1909c7a4db5b91430c7494ef2dab8673929aa80f2305edffe13@group.calendar.google.com';
-
-
   const current_date_time = moment().format('YYYY-MM-DDTHH:mm:ssZ');
   const maanden = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"];
   const dagen = ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"];
