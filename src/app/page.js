@@ -24,20 +24,15 @@ export default async function Home() {
   };
 
   const apikey = process.env.NEXT_PUBLIC_API_KEY;
-
+  const calids = process.env.NEXT_PUBLIC_CAL_IDS;
+  
   const params = new URLSearchParams();
   params.append("key", `${apikey}`);
   params.append("singleEvents", "True");
   params.append("orderBy", "startTime");
   params.append("timeMin", `${current_date_time}`);
 
-  const calendar_urls = [
-    '969ec74f52b7007ab3cfaf306e807939f0da397f543ed311a9bc4cb115710516@group.calendar.google.com',
-    '98a30a37d1a3e1909c7a4db5b91430c7494ef2dab8673929aa80f2305edffe13@group.calendar.google.com',
-    '42245e5ec6cbfa0a3edfebafe6f7ba69e6a34b319712db1499a1374172691a0a@group.calendar.google.com'
-  ];
-
-  const urls = calendar_urls.map(url =>
+  const urls = calids.split(/,/g).map(url => 
     `https://www.googleapis.com/calendar/v3/calendars/${url}/events?${params}`
   )
 

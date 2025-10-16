@@ -9,7 +9,37 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    versioning-strategy: increase
+    groups:
+      major:
+        applies-to: major-updates
+        patterns:
+          - "*"
+        update-types:
+          - "major"
+      minor-and-patch:
+        applies-to: minor-and-patch-updates
+        patterns:
+          - "*"
+        update-types:
+          - "patch"
+          - "minor"
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    versioning-strategy: increase
+    groups:
+      major:
+        applies-to: major-updates
+        patterns:
+          - "*"
+        update-types:
+          - "major"
+      minor-and-patch:
+        applies-to: minor-and-patch-updates
+        patterns:
+          - "*"
+        update-types:
+          - "patch"
+          - "minor"
