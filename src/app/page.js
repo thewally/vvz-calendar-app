@@ -117,6 +117,7 @@ export default async function Home() {
   async function callApis(urls) {
     const response = await Promise.all(urls.map(u => fetch(u)));
     const data = await Promise.all(response.map(r => r.json()));
+    console.log("Used Urls:" +urls)
     console.log(data)
     return data === undefined ? '' : data;
   }
