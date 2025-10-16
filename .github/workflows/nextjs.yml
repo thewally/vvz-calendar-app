@@ -82,7 +82,7 @@ jobs:
       - name: Build with Next.js
         env:
           NEXT_PUBLIC_API_KEY: ${{ secrets.NEXT_PUBLIC_API_KEY }}
-          NEXT_PUBLIC_CAL_IDS: ${{ variables.NEXT_PUBLIC_CAL_IDS }}
+          NEXT_PUBLIC_CAL_IDS: ${{ vars.NEXT_PUBLIC_CAL_IDS }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Upload artifact
