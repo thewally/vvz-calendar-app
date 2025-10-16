@@ -44,8 +44,8 @@ export default async function Home() {
   var events = new Array();
   await callApis(urls)
     .then(calendars =>
-      calendars.map(calendar =>
-        calendar.items.map(item =>
+      calendars.forEach(calendar =>
+        calendar.items.forEach(item =>
           events.push({ 'calendarname': calendar.summary, 'item': item })
         )
       )
