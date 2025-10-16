@@ -23,7 +23,7 @@ export default async function Home() {
     return this.getHours();
   };
 
-  const apikey = process.env.API_KEY;
+  const apikey = process.env.NEXT_PUBLIC_API_KEY;
 
   const params = new URLSearchParams();
   params.append("key", `${apikey}`);
