@@ -19,9 +19,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta http-equiv='cache-control' content='no-cache/'></meta>
-        <meta http-equiv='expires' content='0'></meta>
-        <meta http-equiv='pragma' content='no-cache'></meta>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
