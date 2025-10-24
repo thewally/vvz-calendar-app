@@ -1,4 +1,3 @@
-'use client'
 import moment from 'moment';
 
 export default async function Home() {
